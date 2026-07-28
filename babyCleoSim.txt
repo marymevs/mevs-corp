@@ -1,0 +1,29 @@
+
+BABY CLEO
+
+Ceo: Mary Imevbore
+Cash: 1900
+Revenue: 0
+Employees: 3
+
+Products:
+it, Cost = 100, Price = 500 Demand = 60
+
+
+Inventory:
+it-size:35: 2
+it-size:35.5: 2
+it-size:36: 2
+it-size:36.5: 2
+it-size:37: 2
+it-size:37.5: 2
+it-size:38: 2
+it-size:38.5: 2
+it-size:39: 2
+it-size:39.5: 2
+it-size:40: 2
+it-size:40.5: 2
+it-size:41: 2
+it-size:41.5: 2
+it-size:42: 2
+

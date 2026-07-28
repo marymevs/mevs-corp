@@ -1,0 +1,299 @@
+10000
+
+Gist Ledger
+
+ID: 1f2e16e0-b777-4795-aa6b-2842a1817ea0
+Date: Thu Jul 23 2026 18:15:42 GMT-0400 (Eastern Daylight Time)
+From: MevsCorp
+To: Gist
+Amount: 5000
+Memo: allocation of funds
+
+
+
+MevsCorp Ledger
+
+ID: d39cca99-31b8-4259-aeb4-a549da661b27
+Date: Thu Jul 23 2026 18:15:42 GMT-0400 (Eastern Daylight Time)
+From: Mary Imevbore
+To: MevsCorp
+Amount: 10000
+
+ID: 1f2e16e0-b777-4795-aa6b-2842a1817ea0
+Date: Thu Jul 23 2026 18:15:42 GMT-0400 (Eastern Daylight Time)
+From: MevsCorp
+To: Gist
+Amount: 5000
+
+
+5000
+Map(1) {
+  '4aab0e20-3558-4824-be92-9dd0138a1067' => TechCompany {
+    id: '4aab0e20-3558-4824-be92-9dd0138a1067',
+    name: 'Gist',
+    ceo: null,
+    cash: 5000,
+    ledger: [ [Transaction] ],
+    employees: Map(0) {},
+    revenue: 0,
+    products: Set(2) { [Ink], [Paper] },
+    inventory: Map(0) {},
+    software: Set(1) { [Software] },
+    hardware: Set(1) { [Hardware] }
+  }
+}
+<ref *1> CEO {
+  employeeId: '33cc8aa4-0a37-4d2b-a500-b245ee1cb9e3',
+  name: 'Mary Imevbore',
+  company: TechCompany {
+    id: '4aab0e20-3558-4824-be92-9dd0138a1067',
+    name: 'Gist',
+    ceo: [Circular *1],
+    cash: 5000,
+    ledger: [ [Transaction] ],
+    employees: Map(0) {},
+    revenue: 0,
+    products: Set(2) { [Ink], [Paper] },
+    inventory: Map(0) {},
+    software: Set(1) { [Software] },
+    hardware: Set(1) { [Hardware] }
+  },
+  department: undefined,
+  salary: 100000
+}
+<ref *1> ChairPerson {
+  name: 'Mary Imevbore',
+  company: MevsCorp {
+    name: 'MevsCorp',
+    companies: Map(1) { '4aab0e20-3558-4824-be92-9dd0138a1067' => [TechCompany] },
+    employees: Map(0) {},
+    cash: 5000,
+    ledger: [ [Transaction], [Transaction] ],
+    chair: [Circular *1]
+  }
+}
+<ref *1> Map(1) {
+  '974b9cbe-dbae-4cdb-bee3-1786dec24f32' => SoftwareEngineer {
+    employeeId: '974b9cbe-dbae-4cdb-bee3-1786dec24f32',
+    name: 'Ada Lovelace',
+    company: TechCompany {
+      id: '4aab0e20-3558-4824-be92-9dd0138a1067',
+      name: 'Gist',
+      ceo: [CEO],
+      cash: 5000,
+      ledger: [Array],
+      employees: [Circular *1],
+      revenue: 0,
+      products: [Set],
+      inventory: Map(0) {},
+      software: [Set],
+      hardware: [Set]
+    },
+    department: 'engineering',
+    salary: 100000,
+    stack: Set(0) {}
+  }
+}
+<ref *1> Map(2) {
+  '974b9cbe-dbae-4cdb-bee3-1786dec24f32' => SoftwareEngineer {
+    employeeId: '974b9cbe-dbae-4cdb-bee3-1786dec24f32',
+    name: 'Ada Lovelace',
+    company: TechCompany {
+      id: '4aab0e20-3558-4824-be92-9dd0138a1067',
+      name: 'Gist',
+      ceo: [CEO],
+      cash: 5000,
+      ledger: [Array],
+      employees: [Circular *1],
+      revenue: 0,
+      products: [Set],
+      inventory: Map(0) {},
+      software: [Set],
+      hardware: [Set]
+    },
+    department: 'engineering',
+    salary: 100000,
+    stack: Set(0) {}
+  },
+  'b40b7ab2-8e6c-4e30-ada7-aad72671ba86' => Marketer {
+    employeeId: 'b40b7ab2-8e6c-4e30-ada7-aad72671ba86',
+    name: 'Bozoma Saint John',
+    company: TechCompany {
+      id: '4aab0e20-3558-4824-be92-9dd0138a1067',
+      name: 'Gist',
+      ceo: [CEO],
+      cash: 5000,
+      ledger: [Array],
+      employees: [Circular *1],
+      revenue: 0,
+      products: [Set],
+      inventory: Map(0) {},
+      software: [Set],
+      hardware: [Set]
+    },
+    department: 'marketing',
+    salary: 100000
+  }
+}
+
+Gist Ledger
+
+ID: 1f2e16e0-b777-4795-aa6b-2842a1817ea0
+Date: Thu Jul 23 2026 18:15:42 GMT-0400 (Eastern Daylight Time)
+From: MevsCorp
+To: Gist
+Amount: 5000
+Memo: allocation of funds
+
+ID: aebc9bf4-57e0-44bd-aee3-edf03da66b20
+Date: Thu Jul 23 2026 18:15:42 GMT-0400 (Eastern Daylight Time)
+From: Gist
+To: PrintersWholesaleLtd
+Amount: 600
+Memo: inventory purchase order
+
+
+<ref *1> Map(1) {
+  Hardware {
+    name: 'Gist Printer',
+    price: 90,
+    cogs: 60,
+    demand: 50,
+    company: TechCompany {
+      id: '4aab0e20-3558-4824-be92-9dd0138a1067',
+      name: 'Gist',
+      ceo: [CEO],
+      cash: 4400,
+      ledger: [Array],
+      employees: [Map],
+      revenue: 0,
+      products: [Set],
+      inventory: [Circular *1],
+      software: [Set],
+      hardware: [Set]
+    },
+    type: 'physical'
+  } => 10
+}
+4400
+
+Gist Ledger
+
+ID: 1f2e16e0-b777-4795-aa6b-2842a1817ea0
+Date: Thu Jul 23 2026 18:15:42 GMT-0400 (Eastern Daylight Time)
+From: MevsCorp
+To: Gist
+Amount: 5000
+Memo: allocation of funds
+
+ID: aebc9bf4-57e0-44bd-aee3-edf03da66b20
+Date: Thu Jul 23 2026 18:15:42 GMT-0400 (Eastern Daylight Time)
+From: Gist
+To: PrintersWholesaleLtd
+Amount: 600
+Memo: inventory purchase order
+
+ID: b08223a5-5fe0-416f-8caf-1d7495878f87
+Date: Thu Jul 23 2026 18:15:42 GMT-0400 (Eastern Daylight Time)
+From: Gist
+To: Facebook
+Amount: 100
+Memo: marketing spend
+
+
+4300
+60
+
+Gist Ledger
+
+ID: 1f2e16e0-b777-4795-aa6b-2842a1817ea0
+Date: Thu Jul 23 2026 18:15:42 GMT-0400 (Eastern Daylight Time)
+From: MevsCorp
+To: Gist
+Amount: 5000
+Memo: allocation of funds
+
+ID: aebc9bf4-57e0-44bd-aee3-edf03da66b20
+Date: Thu Jul 23 2026 18:15:42 GMT-0400 (Eastern Daylight Time)
+From: Gist
+To: PrintersWholesaleLtd
+Amount: 600
+Memo: inventory purchase order
+
+ID: b08223a5-5fe0-416f-8caf-1d7495878f87
+Date: Thu Jul 23 2026 18:15:42 GMT-0400 (Eastern Daylight Time)
+From: Gist
+To: Facebook
+Amount: 100
+Memo: marketing spend
+
+ID: 3fd148d3-61be-4120-bf43-5acb1bb8d77d
+Date: Thu Jul 23 2026 18:15:42 GMT-0400 (Eastern Daylight Time)
+From: CustomerX
+To: Gist
+Amount: 270
+Memo: sale of goods
+
+
+<ref *1> Map(1) {
+  Hardware {
+    name: 'Gist Printer',
+    price: 90,
+    cogs: 60,
+    demand: 60,
+    company: TechCompany {
+      id: '4aab0e20-3558-4824-be92-9dd0138a1067',
+      name: 'Gist',
+      ceo: [CEO],
+      cash: 4300,
+      ledger: [Array],
+      employees: [Map],
+      revenue: 270,
+      products: [Set],
+      inventory: [Circular *1],
+      software: [Set],
+      hardware: [Set]
+    },
+    type: 'physical'
+  } => 7
+}
+270
+
+GIST
+
+Ceo: Mary Imevbore
+Cash: 4300
+Revenue: 270
+Employees: 2
+
+Products:
+Ink, Cost = 7, Price = 14 Demand = 50
+Paper, Cost = 10, Price = 20 Demand = 50
+
+
+Inventory:
+Gist Printer: 7
+
+MEVS CORP
+
+Chair: Mary Imevbore
+Cash: 5000
+Companies: 1
+
+Portfolio--
+
+GIST
+
+Ceo: Mary Imevbore
+Cash: 4300
+Revenue: 270
+Employees: 2
+
+Products:
+Ink, Cost = 7, Price = 14 Demand = 50
+Paper, Cost = 10, Price = 20 Demand = 50
+
+
+Inventory:
+Gist Printer: 7
+
